@@ -25,7 +25,7 @@ class CardGame
   end
 
 
-  dif highest_card(card1 card2)
+  def highest_card(card1 card2)
   #should be def not dif
   #missing comma between card1 and card 2
   if card1.value > card2.value

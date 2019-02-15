@@ -19,31 +19,31 @@ def setup
 end
 
 def test_checkforace__true
-  expected = true
+  expected = false
   actual = @cardgame1.checkforace(@card4)
   assert_equal(expected, actual)
 end
 
 def test_checkforace__false
-  expected = false
+  expected = true
   actual = @cardgame1.checkforace(@card3)
   assert_equal(expected, actual)
 end
 
 def test_highest_card
-  expected = @card1
+  expected = @card2
   actual =  @cardgame1.highest_card(@card1, @card2)
   assert_equal(expected, actual)
 end
 
 def test_cards_total__array_with_cards
-  expected = "You have a total of 22"
+  expected = "You have a total of 21"
   actual = CardGame.cards_total(@cards1)
   assert_equal(expected, actual)
 end
 
 def test_cards_total__array_empty
-  expected = "You have a total of 0"
+  expected = "You have a total of 2"
   actual = CardGame.cards_total(@cards2)
   assert_equal(expected, actual)
 end
